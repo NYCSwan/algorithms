@@ -15,18 +15,11 @@ function binarySearch(arr, num) {
       
       else if ( arr[mid] == num ) {
          return mid;
+      } else {
+         end = mid - 1;        
       }
-      
-      else {
-         
-         end = mid - 1;
-         
-      }
-      
    }
-   
-   return -1;
-      
+   return -1;   
 }
 
 
