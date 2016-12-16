@@ -118,23 +118,40 @@ function reverse(str) {
 reverse('these');
 reverse('them');
 
+// Half-index recursion
+
+function reverseRecursive(s) {
+  if (s.length < 2)
+    return s;
+  var halfIndex = Math.ceil(s.length / 2);
+  return reverseRecursive(s.substr(halfIndex)) + //right half
+         reverseRecursive(s.substr(0, halfIndex)); //left half recursively calls itself and reverses
+}
 
 
+// find duplicate characters in a String
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function duplicates(string) {
+	var dups={};
+	var hasDuplicate = false;
+	var size = string.length;
+	for (var i=0; i<size;i++) {
+		var character = string[i]
+		if(dups[character] !== undefined ) {
+			dups[character]++;
+			hasDuplicate= true;
+		} else {
+			dups[character] =1;
+		}
+	}
+	if (hasDuplicate) {
+		for(var j in dups) {
+			if(dups[j] > 1) {
+				console.log(j);
+			}
+		}
+	}
+}
 
 
 
