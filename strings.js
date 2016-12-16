@@ -69,3 +69,90 @@ var firstUniqChar = function(s) {
    }
    return -1;
 };
+
+//reverse String using Iteration
+// with new string
+function reverseStrIterate(str) {
+	var size = str.length;
+	if (size < 2) {
+		return str;
+	}
+	var revrs = '';
+	for (var i=size-1; i>=0; i--) {
+		 revrs = revrs += str[i];
+	}
+	console.log(revrs)
+}
+reverseStrIterate('sally') // yllas
+reverseStrIterate("Bake Bread") //daerB ekaB
+
+// with new array
+function reverseStr(str) {
+	var size = str.length - 1;
+	var revs = [];
+	for(var i=0; i<size; i++) {
+		revs.push(revs.charAt(size-1));
+	}
+	return revs.join('');
+}
+
+// reverse String using Recursion
+function recursiveReverseStr(str) {
+	return (str === '') ? '' : reverse(str.substr[1] + str[0])
+}
+
+// half-index switch for-loop 
+
+function reverse(str) {
+	var size = str.length;
+	var halfIndex = Math.floor(size/2) -1;
+	var tmp;
+	for (var i =0; i <= halfIndex; i++) {
+	    tmp = str[size - i - 1]; // local storing char from -1 index left to 0 idx
+	    str[size - i - 1] = str[i]; // sets new right index as the left index
+	    str[i] = tmp; // sets left idx as the old right idx
+	}
+	return str.join('');
+}
+
+reverse('these');
+reverse('them');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
