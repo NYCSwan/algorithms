@@ -153,37 +153,53 @@ function duplicates(string) {
 	}
 }
 
-// count number of vowels and consonants in a String with poss other characters
+// count number of vowels and consonants in a String with no poss other characters
 function vowelsConsonants(str) {
-	// var vowels = ['a','e','i','o','u'];
-	var isVowel = false;
-	var count = { "vowels"=0, "consenants"=0 };
+	var count = { "vowels": 0, "consenants": 0 };
 
 	for (var i=0; i < str.length; i++) {
 		var character = str[i];
 		switch (character){
 				case 'a':
-					count[vowels]++;
+					count['vowels'] +=1;
 					break;
 				case 'e':
-					count[vowels]++;
+					count['vowels'] +=1;
 					break;
 				case 'i':
-					count[vowels]++;
+					count['vowels'] +=1;
 					break;
 				case 'o':
-					count[vowels]++;
+					count['vowels'] +=1;
 					break;
 				case 'u':
-					count[vowels]++;
+					count['vowels'] +=1;
 					break;
 				default:
-					count[consenants]++;
+					count['consenants'] +=1;
 					break;
 		}
 	}
 	console.log(count)
 }
+
+// count occurrence of a given character in String 
+
+function countOccurances(str, char) {
+	var charCount = 0;
+	
+	for(var i = 0; i < str.length; i++) {
+		if(char === str[i]) {
+			charCount +=1;
+		}
+	}
+	if (charCount === null || str ==='') {
+		return 'try again friend'
+	} else {
+		return charCount;
+	}
+}
+
 
 
 
