@@ -200,11 +200,20 @@ function countOccurances(str, char) {
 	}
 }
 
+// convert numeric String to an int. it should be able to handle + and - character, null and empty String, integer overflow and other corner cases
 
 
+function strToInt(str) {
+	return parseInt(str);
+}
 
+// replace each given character to other e.g. blank with %20
 
+function replaceChar(str, findThis, replaceWith) {
+	return str.replace(findThis, replaceWith)
+}
 
+// find all permutations of String
 
 
 
