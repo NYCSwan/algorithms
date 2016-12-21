@@ -153,11 +153,67 @@ function duplicates(string) {
 	}
 }
 
+// count number of vowels and consonants in a String with no poss other characters
+function vowelsConsonants(str) {
+	var count = { "vowels": 0, "consenants": 0 };
+
+	for (var i=0; i < str.length; i++) {
+		var character = str[i];
+		switch (character){
+				case 'a':
+					count['vowels'] +=1;
+					break;
+				case 'e':
+					count['vowels'] +=1;
+					break;
+				case 'i':
+					count['vowels'] +=1;
+					break;
+				case 'o':
+					count['vowels'] +=1;
+					break;
+				case 'u':
+					count['vowels'] +=1;
+					break;
+				default:
+					count['consenants'] +=1;
+					break;
+		}
+	}
+	console.log(count)
+}
+
+// count occurrence of a given character in String 
+
+function countOccurances(str, char) {
+	var charCount = 0;
+	
+	for(var i = 0; i < str.length; i++) {
+		if(char === str[i]) {
+			charCount +=1;
+		}
+	}
+	if (charCount === null || str ==='') {
+		return 'try again friend'
+	} else {
+		return charCount;
+	}
+}
+
+// convert numeric String to an int. it should be able to handle + and - character, null and empty String, integer overflow and other corner cases
 
 
+function strToInt(str) {
+	return parseInt(str);
+}
 
+// replace each given character to other e.g. blank with %20
 
+function replaceChar(str, findThis, replaceWith) {
+	return str.replace(findThis, replaceWith)
+}
 
+// find all permutations of String
 
 
 
