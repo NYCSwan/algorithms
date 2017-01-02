@@ -214,6 +214,25 @@ function replaceChar(str, findThis, replaceWith) {
 }
 
 // find all permutations of String
+// recursively
+
+function permutationsRecursive(str){
+	var allPermuts =[];
+		if (str.length <= 1) {
+			return allPermuts += str;
+		} else {
+			for(var i=0; i<str; i++) {
+				permutationsRecursive(str[i] + str.subStr(0, i) + str.substring(i + 1, word.length()))
+		}
+	}
+}
+// iteratively 
+
+function permutationsIterative(str){
+	
+}
+
+// permutation with string and number to move left/right
 
 
 
@@ -222,10 +241,8 @@ function replaceChar(str, findThis, replaceWith) {
 
 
 
+// tribonacci sequence
+// the "Tribonacci" sequence takes the sum of the previous 3 numbers to generate the next number. However unlike the Fibonacci sequence, Tribonacci takes a "signature" or starting array of numbers. Different signatures will generate different sequences.
 
-
-
-
-
-
+function tribonacci()
 
