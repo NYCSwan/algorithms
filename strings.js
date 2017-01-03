@@ -237,12 +237,11 @@ function permutationsIterative(str){
 
 
 
+// Compare two strings represented as linked lists
 
 
 
 
-// tribonacci sequence
-// the "Tribonacci" sequence takes the sum of the previous 3 numbers to generate the next number. However unlike the Fibonacci sequence, Tribonacci takes a "signature" or starting array of numbers. Different signatures will generate different sequences.
 
-function tribonacci()
+
 
