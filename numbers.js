@@ -23,3 +23,19 @@ function fibSeq(n) {
 };
 
 fibSeq(4);
+
+// fib seq recursive
+
+function fibonacci(n) {
+	if(n<=2) {
+		return 1;
+	} else {
+		return fibonacci(n-1) + fibonacci(n-2);
+	}
+}
+
+// recursive factorial
+function factorial(n) {
+	if(n<2) return 1;
+	return n * factorial(n-1);
+}
