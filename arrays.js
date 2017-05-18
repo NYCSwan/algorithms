@@ -1,3 +1,95 @@
+// Find all even number in array
+
+function evens(arr) {
+  var evens = [];
+  for(var i=0;i<arr.length;i++){
+    if(arr[i]%2===0){
+      evens.push(arr[i]);
+    }
+  }
+  return evens
+}
+
+// sum pair, unsorted arrg
+// Find the minimum (Min) and maximum (Max) numbers from the array.
+// In case the numbers are unique, we can allocate a boolean array of length (Max-Min).
+// Iterate through the input array and for each number C encountered, mark that index C in the boolean array as true.
+// Iterate through the boolean array and for each index i in the array if the index S-i and index i both contain true. Then we found our two numbers which can result in sum S.
+// Break the loop and iterate through the input array to find the numbers and report their indices.
+// In case the array contains duplicates, we can allocate an int array of length (Max-Min) and initialize it with zeroes.
+// Iterate through the input array and for each number C encountered, increment the content of index C in the int array by 1.
+// Iterate through the int array and for each index i in the array if the index S-i and index i both are greater than zero. Then we found our two numbers which can result in sum S.
+// Break the loop and iterate through the input array to find the numbers and report their indices.
+
+function sumPair(array, sumTarget) {
+  if (array.length < 2) return;
+
+  const sortedArr = array.sort(); //figure out later
+
+  for(var i=0; i<array.length; i++){
+    for(var j=array.length-1;j>=0; j--) {
+      console.log(`i: ${array[i]}`);
+      console.log(`j: ${array[j]}`);
+
+    }
+  }
+}
+
+// shuffle- Knuth Shuffle aka Fisher-Yates shuffle
+// input: an ordered array of n numbers
+// output: shuffled array
+
+function shuffle(arr, n) {
+  for (var i=0; i< n; i++) {
+    var randomIndex = Math.floor((Math.random()*n) + 1)
+    var temp = arr[randomIndex];
+    arr[randomIndex] = arr[i];
+    arr[i] = temp;
+    
+  }
+  return arr
+}
+
+
+
+// Rotated Sorted Array Search 
+// Suppose a sorted array is rotated at some pivot unknown to you beforehand.
+
+// (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2 ).
+
+// You are given a target value to search. If found in the array, return its index, otherwise return -1.
+
+// You may assume no duplicate exists in the array.
+
+// Input : [4 5 6 7 0 1 2] and target = 4
+// Output : 0
+
+
+// translate an array of nums into letters in the corresponding alphabet
+
+// function numsToAlpha(array)
+// var alphabet = {
+//   1:'a',
+// }
+
+// 1 num is a dup, find the dup- array not ordered
+
+function oneDup(array) {
+  var checkedNums = {};
+  if (array.length <= 1) {
+    return array;
+
+  for(var i=0; i<array.length; i++){
+    var currentNum = array[i];
+    }
+    if (!checkedNums[currentNum]){
+      checkedNums[currentNum] = 1;
+    } else {
+      return currentNum;
+    }
+  }
+}
+
 // flatten
 function flatten(arrays){
 		arrays.reduce(function(flattenedArr, current) {

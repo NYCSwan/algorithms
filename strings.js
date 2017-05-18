@@ -1,3 +1,63 @@
+//  Given an array of integers, return the number that it repeated the most. 
+function mostRepeated(arr) {
+	var frqOfObj = {};
+
+	for(var i=0; i<=arr.length-1;i++){
+		if (!frqOfObj[arr[i]]) {
+			frqOfObj[arr[i]]=1;
+		} else {
+			frqOfObj[arr[i]]++;
+		}
+	}
+
+	console.log(frqOfObj)
+}
+
+
+// - Find out if a given string is a palindrome (ie. kayak, mom,...)
+function palindrome(str) {
+	var size = str.length-1;
+	for (var i = 0; i <= size; i++) {
+		if (str[i] !== str[size-i]) {
+			return false
+		}
+	}
+	return true;
+}
+
+// Reverse a string
+function reverse(str) {
+	var reversed = [];
+	var size = str.length-1;
+	for (var i=0;i<=size;i++){
+		reversed.push(str[size-i]);
+	}
+	return reversed.join('');
+}
+
+// how many occurances of a given character in a string
+
+const numOfChar = (char, string) {
+	let count = 0;
+	for (let i =0; i< string.length; i++){
+		if (string[i]=== char) {
+			count++;
+		}
+	}
+	return count;
+}
+
+// checks whether any permutation ↴ of an input string is a palindrome
+// Examples:
+
+// "civic" should return True
+// "ivicc" should return True
+// "civil" should return False
+// "livci" should return False
+function permutationPalindrome(string) {
+	
+}
+
 // Print only dublicate characters 
 function duplicates(str) {
 	var dupObj = {}
@@ -87,13 +147,13 @@ reverseStrIterate('sally') // yllas
 reverseStrIterate("Bake Bread") //daerB ekaB
 
 // with new array
-function reverseStr(str) {
-	var size = str.length - 1;
-	var revs = [];
-	for(var i=0; i<size; i++) {
-		revs.push(revs.charAt(size-1));
+function reverse(str) {
+	var revStr = [];
+	var size = str.length-1;
+	for (var i=0;i<=size;i++){
+		console.log(str[i]); revStr.push(str[size-i]);
 	}
-	return revs.join('');
+	return revStr.join('');
 }
 
 // reverse String using Recursion

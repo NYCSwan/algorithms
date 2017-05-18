@@ -63,12 +63,12 @@ function getOrigFirst(arr) {
    return 0;
 }
 
-O(log n);
+// O(log n);
 
-http://bigocheatsheet.com/
+// http://bigocheatsheet.com/
 
-log(16) = 4
-binarySearch([9, 12, 17, 2, 4, 5], 5);
+// log(16) = 4
+// binarySearch([9, 12, 17, 2, 4, 5], 5);
 
 // pallindrome
 function pallindrome(string) { 

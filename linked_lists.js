@@ -1,3 +1,19 @@
+class linkedListNode {
+	constructor() {
+		this.value = null;
+		this.next = null;
+		
+	}
+} 
+
+class linkedList {
+	this.head = null;
+	this.length = 0;
+}
+
+linkedList.prototype.push 
+
+ 
 function linkedList() {
 	this.head = null;
 	this.length = 0;
